@@ -1,0 +1,337 @@
+$btn-close-color: white;
+
+@import "~bootstrap/scss/bootstrap";
+
+
+
+
+
+
+.btn {
+    line-height: 1;
+    padding: 0.65rem 0.75rem;
+    transition: 0.3s ease all;
+    [data-icon]{
+      margin: 0 0.5rem;
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+      // &:first-child {
+      //   margin-left: 0;
+      // }
+    }
+    &.no-pad {
+      padding: 0;
+    }
+    &:disabled {
+      opacity: 0.25;
+    }
+    &:focus,
+    &:active {
+      // box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+      box-shadow: none !important;
+      opacity: 0.86;
+    }
+    &.btn-primary {
+      color: #fff;
+      background-color: var(--root);
+      border-color: var(--root);
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: var(--root);
+        border-color: var(--root);
+      }
+    }
+    
+    &.btn-danger {
+      color: #fff;
+      background-color: var(--red);
+      border-color: var(--red);
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: var(--red);
+        border-color: var(--red);
+      }
+    }
+    
+    &.btn-dark {
+      color: #fff;
+      background-color: var(--dark);
+      border-color: var(--dark);
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+    }
+  
+    &.btn-outline-primary {
+      color: var(--root);
+      background-color: transparent;
+      border-color: var(--root);
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: var(--root);
+        border-color: var(--root);
+        color: white;
+      }
+    }
+    &.btn-outline-dark {
+      color: var(--dark);
+      background-color: transparent;
+      border-color: var(--dark);
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: var(--dark);
+        border-color: var(--dark);
+        color: white;
+      }
+    }
+    &.btn-link {
+      color: var(--root);
+      text-decoration: none;
+      &.active,
+      &:hover,
+      &:focus {
+        color: var(--root);;
+      }
+    }
+    &.btn-clear {
+      color: var(--dark);
+      text-decoration: none;
+      border: none;
+      outline: none;
+      &.white {
+        color: var(--whtie);
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        color: var(--root);
+      }
+    }
+    &.btn-icon {
+      color: var(--dark);
+      padding: 0 0.2rem;
+      &[circle] {
+        border-radius: 100%;
+      }
+      &.white {
+        color: var(--white);
+        &:hover,&:focus {
+          color: var(--white);
+        }
+      }
+      &:hover,
+      &:focus {
+        color: var(--dark);
+        opacity: 0.6;
+      }
+      &.active{
+        color: var(--root);
+      }
+      [data-icon] {
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span {
+        font-size: 1rem;
+        display: inline-block;
+        margin: 0 0.5rem ;
+        vertical-align: middle;
+      }
+    }
+    &.btn-full{
+      width: 100%;
+    }
+    &.btn-circle {
+      text-align: center;
+      min-width: 0;
+      [data-icon] {
+        margin: 0;
+        // vertical-align: middle;
+        display: inline-block;
+        vertical-align: -5%;
+      }
+      &.btn-sm {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border-radius: 100%;
+        font-size: 0.65rem;
+      }
+  
+      &.btn-md {
+        width: 50px;
+        height: 50px;
+        padding: 7px 10px;
+        border-radius: 25px;
+        font-size: 10px;
+        text-align: center;
+      }
+      &.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        border-radius: 35px;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+}
+
+.btn-sm, 
+.btn-group-sm > .btn {
+  padding: 0.5rem 0.5rem;
+  // font-size: 0.875rem;
+  // border-radius: 0.2rem;
+}
+  
+.page-item{
+  .page-link {
+    color: var(--dark);
+  }
+    &.active {
+      .page-link {  
+        background-color: var(--root);
+        border:  var(--root);
+      }
+
+    }
+  }
+
+
+  .list-group {
+    overflow: hidden;
+  }
+
+  .list-group-item {
+    padding: 0.65rem 1rem;
+    .chevron  {
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      width: 64px;
+      transform: translate(0, -50%);
+    }
+    &.active {
+      z-index: 2;
+      color: #fff;
+      background-color: var(--root);
+      border-color: var(--root);
+    }
+  }
+
+
+  .form-check {
+    min-height: 0;
+    margin-bottom: 0px;
+    label {
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .form-check-input {
+      float: none;
+ 
+    }
+  }
+  
+  .form-check-input {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 1rem;
+    float: none;
+    margin-top: 0px;
+    transition: 0.3s ease all;
+    &[type=checkbox]{
+      border-radius: 0px;
+    }
+    &:checked {
+      background-color: var(--root);
+      border-color: var(--root);
+    }
+  }
+
+
+  .invalid-feedback {
+    font-size: 8px;
+    margin: 0;
+  }
+  
+
+  .modal-dialog {
+    .btn-close {
+      color: white;
+      opacity: 1;
+      width: 1rem;
+      height: 1rem;
+      padding: 1rem;
+    }
+    .modal-header {
+      padding: 0.5rem 1rem;
+      background-color: var(--dark);
+      .modal-title {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 900;
+      }
+    }
+    &.modal-full {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      .modal-body {
+        padding: 0px;
+      }
+      .modal-content {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        // background-color: var(--dark);
+        color: white;
+  
+        .modal-header {
+          border-radius: 0;
+          border: none
+        }
+      }
+    }
+    .modal-body {
+      @include scrollbar();
+      padding: 1rem 2rem;
+    }
+  }
+
+
+  .popover {
+    max-width: 100%;
+
+    .popover-body {
+      // padding: 0;
+      max-height: 600px;
+      overflow:hidden;
+      overflow-y: auto;
+    }
+  }
+
+  .list-group-item {
+    transition: 0.3s ease all;
+    &.list-group-item-dark {
+      background-color: var(--dark);
+      color: white;
+    }
+  }
